@@ -37,7 +37,6 @@
 
 <script>
 import sourceData from '@/data.json'
-import AppDate from "@/components/AppDate";
 
 export default {
   name: "ThreadList",
@@ -46,9 +45,6 @@ export default {
       type: Array,
       required: true
     }
-  },
-  components: {
-    AppDate,
   },
   data() {
     return {
