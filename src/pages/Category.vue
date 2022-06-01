@@ -1,5 +1,5 @@
 <template>
-  <div class="col-full">
+  <div class="container col-full">
     <h1>{{ category.name }}</h1>
     <ForumList
         :forums="getForumsByCategory(category.id)"

@@ -1,6 +1,7 @@
 <template>
-    <div class="col-full push-top">
+  <div class="col-full">
 
+    <div class="col-full push-top">
       <div class="forum-header">
         <div class="forum-details">
           <h1>{{ forum.name }}</h1>
@@ -13,6 +14,7 @@
     <div class="col-full push-top">
       <ThreadList :threads="threads"/>
     </div>
+  </div>
 
 </template>
 

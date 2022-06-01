@@ -1,13 +1,11 @@
 <template>
-  <div class="category-list">
-    <ForumList
-        v-for="category in categories"
-        :key="category.id"
-        :forums="getForumsByCategory(category.id)"
-        :title="category.name"
-        :category-id="category.id"
-    />
-  </div>
+  <ForumList
+      v-for="category in categories"
+      :key="category.id"
+      :forums="getForumsByCategory(category.id)"
+      :title="category.name"
+      :category-id="category.id"
+  />
 </template>
 
 <script>
@@ -26,7 +24,7 @@ export default {
     }
   },
   methods: {
-    getForumsByCategory (categoryId) {
+    getForumsByCategory(categoryId) {
       return sourceData.forums.filter(forum => forum.categoryId === categoryId);
     }
   }

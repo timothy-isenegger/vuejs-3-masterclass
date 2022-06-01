@@ -1,6 +1,6 @@
 <template>
-  <div class="col-full">
-    <h1>Welcome to the forum</h1>
+  <div class="container">
+    <h1 class="push-top">Welcome to the Vue.js 3 Master Class Forum</h1>
     <CategoryList :categories="categories" />
   </div>
 </template>
