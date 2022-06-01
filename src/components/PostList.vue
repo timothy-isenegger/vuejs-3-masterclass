@@ -3,18 +3,14 @@
 
     <div v-for="post in posts"
          :key="post.id"
-         class="post"
-    >
+         class="post">
 
       <div class="user-info">
         <a href="#" class="user-name">{{ userById(post.userId).name }}</a>
-
         <a href="#">
           <img class="avatar-large" :src="userById(post.userId).avatar" alt="">
         </a>
-
         <p class="desktop-only text-small">107 posts</p>
-
       </div>
 
       <div class="post-content">
@@ -23,9 +19,8 @@
         </div>
       </div>
 
-
       <div class="post-date text-faded">
-        {{ post.publishedAt }}
+        <AppDate :timestamp="post.publishedAt" />
       </div>
 
     </div>
@@ -34,9 +29,13 @@
 
 <script>
 import sourceData from '@/data.json';
+import AppDate from '@/components/AppDate';
 
 export default {
   name: "PostList",
+  components: {
+    AppDate,
+  },
   props: {
     posts: {
       required: true,
