@@ -17,11 +17,8 @@
       <ul>
         <li class="navbar-user">
           <a href="#">
-            <img class="avatar-small" src="https://pbs.twimg.com/profile_images/1188775562657091594/5mgkg44t_400x400.jpg" alt="">
-            <span>
-                        Alex Kyriakidis
-                        <img class="icon-profile" src="assets/img/svg/arrow-profile.svg" alt="">
-                    </span>
+            <img class="avatar-small" :src="authUser.avatar" :alt="`${authUser.name} profile picture`">
+            <span>{{ authUser.name }} <img class="icon-profile" src="../assets/svg/arrow-profile.svg" alt=""></span>
           </a>
 
           <!-- dropdown menu -->
@@ -37,34 +34,39 @@
       </ul>
 
 
-<!--      <ul>
-        <li class="navbar-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="navbar-item">
-          <a href="category.html">Category</a>
-        </li>
-        <li class="navbar-item">
-          <a href="forum.html">Forum</a>
-        </li>
-        <li class="navbar-item">
-          <a href="thread.html">Thread</a>
-        </li>
-        &lt;!&ndash; Show these option only on mobile&ndash;&gt;
-        <li class="navbar-item mobile-only">
-          <a href="profile.html">My Profile</a>
-        </li>
-        <li class="navbar-item mobile-only">
-          <a href="#">Logout</a>
-        </li>
-      </ul>-->
+      <!--      <ul>
+              <li class="navbar-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="navbar-item">
+                <a href="category.html">Category</a>
+              </li>
+              <li class="navbar-item">
+                <a href="forum.html">Forum</a>
+              </li>
+              <li class="navbar-item">
+                <a href="thread.html">Thread</a>
+              </li>
+              &lt;!&ndash; Show these option only on mobile&ndash;&gt;
+              <li class="navbar-item mobile-only">
+                <a href="profile.html">My Profile</a>
+              </li>
+              <li class="navbar-item mobile-only">
+                <a href="#">Logout</a>
+              </li>
+            </ul>-->
     </nav>
   </header>
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
+
 export default {
-  name: "TheNavbar"
+  name: "TheNavbar",
+  computed: {
+    ...mapGetters(['authUser'])
+  }
 }
 </script>
 
