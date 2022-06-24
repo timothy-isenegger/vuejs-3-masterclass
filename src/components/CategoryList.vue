@@ -10,7 +10,6 @@
 
 <script>
 import ForumList from "@/components/ForumList";
-import sourceData from '@/data.json';
 
 export default {
   name: "CategoryList",
@@ -25,7 +24,7 @@ export default {
   },
   methods: {
     getForumsByCategory(categoryId) {
-      return sourceData.forums.filter(forum => forum.categoryId === categoryId);
+      return this.$store.state.forums.filter(forum => forum.categoryId === categoryId);
     }
   }
 }
